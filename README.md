@@ -1,22 +1,47 @@
 # Deep Manager (browser extension)
-A deep manager browser extension. Helps manage Deep. I've wanted to make this forever.
+A deep manager browser extension. Helps manage Deeps. I've wanted to make this forever.
 
 # Features
-  - Omnibox
-    - dm
-    - To Do List
-      - Add a task
-    - My Dev Reference
-      - mdn: https://developer.mozilla.org/en-US/search?q=
-      - npm: https://www.npmjs.com/search?q=
-      - docs: devdocs.io search
-    - Reference
-      - wiki: 
-      - yt: My Youtube playlists. No searching yt from here ever.
-    - 
+
+## Mindful Internet Usage
+
+- Infinite scroll
+  - detect
+  - intervene
+- Search
+  - Show warning and goals on search pages
+  - Detect excess
+  - intervene
+- Save searches for later
+
+## New Tab Page
+
+1. View current focus
+2. View goals
+3. Vuew searches
+
+<!-- ## Popup
+Click the icon
+
+## Options (settings)
+
+- -->
+
+<!-- ## ```deep```: Omnibox CLI
+
+0. ```help```
+  - List and explain commands
+1. To Do List
+  - ```tasks``` - View tasks
+  - ```add``` - Add a task
+2. Goals
+  - ```focus``` - Select current goal
+
+<!-- ## Other
+  - `yt`: My Youtube playlists. No searching yt from here ever. -->
 
 
-# Features To Do List
+# Features Backlog
 First
   - Set current task and have it on your mind
   - Detect infinite scrolling
@@ -35,13 +60,17 @@ Eventually
 
 # Development Guide 
 
-## Manifest.json guide
+[Chrome Extension Docs](https://developer.chrome.com/docs/extensions) - See the examples.
+
+[Convert To Safari Extension]() - The extension is packaged as a mac/ios app.
+
+## Manifest.json quick reference
   - background: run a service-worker in the background
   - content scripts: Run code on specified web pages
   - "chrome_url_overrides" - custom new tab, and more.
   - "omnibox" - "dm" for custom cli
 
-## Permissions guide
+## Permissions quick reference
   - "storage" - allows offline stoarge
   - "tabs" - tabs, tab groups, etc.
   - "activeTab" - The active tab

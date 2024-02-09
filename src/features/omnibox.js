@@ -1,13 +1,14 @@
 /**
  * Reminder: This runs in the background (service-worker.js)!
  * 
- * Adds "dm" keyword to omnibox.
+ * Adds "deep" keyword to omnibox.
  *  1. Start a goal from the omnibox
  *  2. Close everything else from the omnibox
  */
 
 const appendLog = (text) => {
   chrome.runtime.sendMessage({ type: 'append-log', text });
+  console.log(text);
 };
 
 chrome.omnibox.onInputStarted.addListener(function () {

@@ -12,10 +12,10 @@
   "action": {
     "default_icon": "images/icon.png",
     "default_title": "Deep Manager",
-    "default_popup": "popup.html"
+    "default_popup": "./popup.html"
   },
   "background": {
-    "service_worker": "service_worker.js"
+    "service_worker": "./background.js"
   },
   "content_scripts": [
     {
@@ -23,30 +23,23 @@
         "<all_urls>"
       ],
       "js": [
-        "all-pages-script.js"
+        "./allPagesScript.js"
       ]
     }
   ],
   "chrome_url_overrides": {
-    "newtab": "new-tab.html"
+    "newtab": "./newTab.html"
   },
   "omnibox": {
-    "keyword": "dm"
-  },
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "enabled": true,
-        "path": "rules_1.json"
-      }
-    ]
+    "keyword": "deep"
   },
   "permissions": [
     "storage",
     "tabs",
     "scripting",
     "activeTab",
+    "webRequest",
+    "webNavigation",
     "declarativeNetRequest",
     "declarativeNetRequestFeedback"
   ],
